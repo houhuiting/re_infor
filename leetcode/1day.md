@@ -130,7 +130,6 @@ public:
     int removeElement(vector<int>& nums, int val) {
         int fast = 0;
         int slow = 0;
-        int len = nums.size();
         while (fast < nums.size()) {
             if (nums[fast] == val) {
                 fast++;
