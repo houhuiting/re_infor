@@ -17,18 +17,22 @@ public:
     ListNode* removeElements(ListNode* head, int val) {
         if (!head)
             return head;
+        // 设置虚拟头节点，用于应对删除第一个节点的情况
+        ListNode* dummy = new ListNode();
+        dummy->next = head;
+         // 设置一个循环遍历p，从前往后循环链表
         ListNode* p = new ListNode();
-        p->next = head;
+        p = dummy;
         while (p->next != NULL)
         {
             if (p->next->val == val) {
                 p->next = p->next->next;
             }
             else {
-                p = p->next;
+                p = p->next; 
             }
         }
-        return head;
+        return dummy->next;
     }
 };
 

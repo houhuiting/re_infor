@@ -18,12 +18,13 @@ public:
             return head;
         ListNode* p1 = new ListNode();
         ListNode* p2 = new ListNode();
-        ListNode* p3 = new ListNode();
         p1 = head;
         p2 = head->next;
+        // 手动将第一个节点反转过来
         p1->next = nullptr;
+        // 从第二个节点开始反转
         while (p2!=NULL) {
-            p3 = p2->next;
+            ListNode* p3 = p2->next;
             p2->next = p1;
             p1 = p2;
             p2 = p3;
