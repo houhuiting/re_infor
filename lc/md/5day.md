@@ -103,7 +103,7 @@ public:
 };
 ```
 
-## 242 有效的字母异位词
+## 349 两个数组的交集
 
 #### 题目
 
@@ -235,7 +235,7 @@ public:
             // 看target - nums[i]是否在map中，如果在就可以输出结果
             if (map.count(add)) {
                 res.push_back(map[add]);
-                res.push_back(nums[i]);
+                res.push_back(i);
                 break;
             }
             // 看target - nums[i]是否在map中，如果不在，就把nums[i]放到map中
