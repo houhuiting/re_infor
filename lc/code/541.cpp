@@ -12,7 +12,12 @@ public:
             int loop = i/k;
             //如果loop是偶数，那就反转
             if(loop%2 == 0) {
-                reverse(s.begin() + i, s.begin() + i + k);
+                // 如果最后一次反转的数量不够k个，那就反转到end()为止
+                if (i + k > s.size())
+                    reverse(s.begin() + i, s.end());
+                else {
+                    reverse(s.begin() + i, s.begin() + i + k);
+                }
             }
             i = i + k;
         }
