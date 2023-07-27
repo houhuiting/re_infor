@@ -29,6 +29,6 @@ public:
         return sum;
     }
     int sumOfLeftLeaves(TreeNode* root) {
-        return traversal(root, 1);
+        return traversal(root, 0);
     }
 };
