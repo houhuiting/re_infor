@@ -31,13 +31,13 @@ public:
         // 使用当前节点位置，节点将中序遍历的数组分为左右数组
         // 得到[0,index-1]数组
         vector<int> left_inorder(inorder.begin(), inorder.begin() + index);
-        // 得到[index,end-1]数组
+        // 得到[index+1,end-1]数组
         vector<int> right_inorder(inorder.begin() + index + 1, inorder.end());
         
         // 使用中序遍历分成的左右数组大小，将后序遍历也分成对应大小的左右数组
         // 得到[0,size-1]数组
         vector<int> left_postorder(postorder.begin(), postorder.begin() + left_inorder.size());
-        // 得到[size,end-2]数组
+        // 得到[size+1,end-2]数组
         vector<int> right_postorder(postorder.begin() + left_inorder.size(), postorder.end() - 1);
         
         // 生成当前节点
